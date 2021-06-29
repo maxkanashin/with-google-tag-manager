@@ -1,4 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
+import Link from 'next/link'
 import { GTM_ID } from '../lib/gtm'
 
 export default class MyDocument extends Document {
@@ -29,6 +30,18 @@ export default class MyDocument extends Document {
             />
           </noscript>
           <Main />
+          <ul>
+            <li>
+              <Link href="/">
+                <a>home</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/ex1">
+                <a>ex1</a>
+              </Link>
+            </li>
+          </ul>
           <NextScript />
         </body>
       </Html>
